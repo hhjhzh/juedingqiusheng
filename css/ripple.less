@@ -1,0 +1,65 @@
+.ripple{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 60%;
+  top: 60%;
+  span{
+    color: #e69800;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 999;
+    animation: move3 1s linear 0s infinite;
+  }
+  b{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    animation: move1 1s linear 0s infinite;
+    //left: 50%;
+    //top: 50%;
+    //transform: translateX(-50%) translateY(-50%);
+    &:nth-of-type(2){
+      animation: move1 1s linear 0s infinite;
+    }
+  }
+
+
+
+}
+@keyframes move1 {
+  from{
+    transform: scale(1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(2);
+    opacity: 0;
+  }
+
+}
+@keyframes move2 {
+  from{
+    transform: scale(1);
+    opacity: 1;
+  }
+  to{
+    transform: scale(3);
+    opacity: 0;
+  }
+
+}
+@keyframes move3 {
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0.2;
+  }
+
+}
